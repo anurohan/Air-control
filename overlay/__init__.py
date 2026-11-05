@@ -1,0 +1,2 @@
+"""Transparent overlay components."""
+

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airos-ai"
+version = "0.1.0"
+description = "Local-first touchless Windows control with hand tracking"
+requires-python = ">=3.11,<3.13"
+dependencies = ["numpy>=1.26,<3"]
+
+[tool.setuptools]
+packages = ["app", "vision", "gestures", "overlay", "input_control", "services", "typing_assist", "ui"]
+
+[project.optional-dependencies]
+desktop = ["PySide6>=6.7,<7", "opencv-python>=4.9,<5"]
+tracking = ["mediapipe>=0.10.14,<0.11"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+airos = "app.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+

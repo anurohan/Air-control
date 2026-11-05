@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: airos-ai
+Version: 0.1.0
+Summary: Local-first touchless Windows control with hand tracking
+Requires-Python: <3.13,>=3.11
+License-File: LICENSE
+Requires-Dist: numpy<3,>=1.26
+Provides-Extra: desktop
+Requires-Dist: PySide6<7,>=6.7; extra == "desktop"
+Requires-Dist: opencv-python<5,>=4.9; extra == "desktop"
+Provides-Extra: tracking
+Requires-Dist: mediapipe<0.11,>=0.10.14; extra == "tracking"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Dynamic: license-file
